@@ -1,0 +1,27 @@
+{
+  "name": "hh-apportionment",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Huntington-Hill 席位分摊与优先级解释后端（API 与 CLI，离线）",
+  "type": "commonjs",
+  "bin": {
+    "hh": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node --no-warnings dist/server.js",
+    "serve": "node --no-warnings dist/server.js",
+    "cli": "node --no-warnings dist/cli.js",
+    "pretest": "tsc -p tsconfig.test.json",
+    "test": "node --no-warnings --test \"dist-test/test/**/*.test.js\"",
+    "demo": "npm run build && node --no-warnings dist/cli.js demo",
+    "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true});require('fs').rmSync('dist-test',{recursive:true,force:true})\""
+  },
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "typescript": "^7.0.2"
+  }
+}

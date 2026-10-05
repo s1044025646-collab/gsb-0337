@@ -1,0 +1,7 @@
+{
+  "regions": [
+    { "code": "NORTH", "population": "6000" },
+    { "code": "SOUTH", "population": "3000" },
+    { "code": "WEST", "population": "1000" }
+  ]
+}
